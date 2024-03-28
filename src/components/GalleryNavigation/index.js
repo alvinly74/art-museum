@@ -8,7 +8,7 @@ function GalleryNavigation(props) {
             <h1>Hello from GalleryNavigation</h1>
                 <NavLink key='home' exact to={`/`}>
                     Home
-                </NavLink>'
+                </NavLink>
                 {records.map((record) => (
                     <NavLink key={record.id} to={`/galleries/${record.id}`}>
                         {record.name}
@@ -17,4 +17,4 @@ function GalleryNavigation(props) {
             </nav>
     );
   }
-  export default GalleryNavigation
+  export default GalleryNavigation;
