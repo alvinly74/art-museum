@@ -6,9 +6,9 @@ function GalleryView(props) {
 
     const foundRecord = records.find(record => Number(record.id) == Number(galleryId))
     return (
-        <h1>
+        <h2>
             Hello from {foundRecord.name}
-        </h1>
+        </h2>
     )
 }
 export default GalleryView;
