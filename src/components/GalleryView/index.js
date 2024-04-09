@@ -1,4 +1,5 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Route } from 'react-router-dom';
+import ArtImageTile from '../ArtImageTile';
 
 function GalleryView(props) {
     const {galleryId} = useParams();
@@ -8,6 +9,11 @@ function GalleryView(props) {
     return (
         <h2>
             Hello from {foundRecord.name}
+            {foundRecord.objects.map((art) => (
+                <Route exact path={`/galleries/:galleryId`}>
+                    <ArtImageTile art={art} galleryId={galleryId}/>
+                </Route>
+            ))}
         </h2>
     )
 }
